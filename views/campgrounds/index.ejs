@@ -5,12 +5,12 @@
 <div class="card mb-3">
     <div class="row">
         <div class="col-md-4">
-            <% if(campground.images.length) {%>
-            <img class="img-fluid" alt="" src="<%= campground.images[0].url %>">
-            <% }else {%>
-            <img class="img-fluid" alt=""
-                src="https://res.cloudinary.com/dl4yx3vmj/image/upload/v1637138939/YelpCamp/by5wpt8wgb4d1r5p10xr.jpg">
-            <% } %>
+            <%if(campground.images.length) {%>
+                <img class="img-fluid" alt="" style="width: 100%; height: 300px;" src="<%=campground.images[0].url%>">
+                <% }else {%>
+                <img class="img-fluid" alt=""
+                   src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/11/Camping-in-Kullu-29_nov2.jpg" >
+                <% } %>
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -32,3 +32,5 @@
 </script>
 
 <script src="/javascripts/clusterMap.js"></script>
+
+<!-- src="https://res.cloudinary.com/dl4yx3vmj/image/upload/v1637087325/YelpCamp/jng97zhcnrqbldktcoox.jpg" -->

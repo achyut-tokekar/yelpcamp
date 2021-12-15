@@ -22,8 +22,8 @@ const reviewRoutes = require('./routes/reviews');
 const MongoStore = require('connect-mongo');
 
 // const dbUrl = process.env.DB_URL;
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
-
+// const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
+const dbUrl = 'mongodb://localhost:27017/yelp-camp';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -101,11 +101,11 @@ const styleSrcUrls = [
 const connectSrcUrls = [
     "https://api.mapbox.com/",
     "https://a.tiles.mapbox.com/",
-    // "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
 ];
 const fontSrcUrls = [];
+
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
